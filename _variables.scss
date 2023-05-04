@@ -1,0 +1,7 @@
+$main-color-green1: #0C4B35;
+$main-color-green2:#00730C;
+@mixin flexCenter($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}

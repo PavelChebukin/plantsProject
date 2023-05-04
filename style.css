@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
+.top-navbar {
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  font-size: 14px;
+  background-color: #0C4B35;
+  height: 59px;
+  display: flex;
+  justify-content: 0;
+  align-items: center;
+}
+
+.row {
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: 0;
+  padding: 0 15px;
+}
+
+.contacts {
+  display: flex;
+  gap: 30px;
+}
+
+.language {
+  display: flex;
+  justify-content: 0;
+  align-items: center;
+}
+
+.language::after {
+  content: url(imagees/Down\ Arrow.svg);
+  display: block;
+  padding-left: 5px;
+}
+
+.contacts li {
+  display: flex;
+  justify-content: 0;
+  align-items: center;
+  gap: 10px;
+}
+
+.mail::before {
+  content: url(imagees/email\ 1.svg);
+  display: block;
+}
+
+.phone::before {
+  content: url(imagees/phone-call\ 1.svg);
+  display: block;
+}
+
+.location::before {
+  content: url(imagees/location\ 1.svg);
+  display: block;
+}
+
+.navbar {
+  font-family: "Nunito", sans-serif;
+  display: flex;
+  justify-content: 0;
+  align-items: center;
+  font-weight: 700;
+  height: 85px;
+}
+
+.logo {
+  font-size: 40px;
+  display: flex;
+  justify-content: 0;
+  align-items: center;
+}
+
+.logo span {
+  color: #00730C;
+  position: relative;
+}
+
+.logo span::before {
+  content: url(imagees/plant.svg);
+  display: block;
+  position: absolute;
+  top: -19px;
+  left: -3px;
+}
+
+.frame {
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.frame-child {
+  width: 70%;
+  font-size: 16px;
+}
+
+.frame-child li::after {
+  content: url(imagees/Down_Arrow_black.svg);
+  padding-left: 5px;
+}
+
+.btn {
+  width: 170px;
+  height: 50px;
+  background: #00730C;
+  border-radius: 5px;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.button-call {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+@media (max-width: 1200px) {
+  .contacts-content, .frame-child {
+    display: none;
+  }
+  .frame {
+    justify-content: right;
+    gap: 40px;
+  }
+  .button-call {
+    width: 40px;
+    height: 34px;
+    border-radius: 10px;
+  }
+  .button-call img {
+    width: 20px;
+  }
+  .button-call span {
+    display: none;
+  }
+  .frame::after {
+    content: url(imagees/Menu_1_.svg);
+  }
+}/*# sourceMappingURL=style.css.map */
