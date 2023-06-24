@@ -1,0 +1,303 @@
+// preview
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+.preview {
+    background: linear-gradient(79.58deg, rgba(0, 115, 12, 0.81) -39.14%, rgba(251, 246, 238, 0) 90.23%);
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+}
+.background {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: url(imagees/Preview.png) no-repeat left 46px / cover;
+    right: 0;
+}
+.background img {
+    width: 100%;
+    display: none;
+}
+.background-plant {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -10;
+}
+.preview-content {
+    width: 50%;
+    margin-top: 133px;
+    @include flexCenter(start, start);
+    flex-direction: column;
+    gap: 20px;
+    z-index: 10;
+}
+.headlines-services {
+    @include flexCenter(normal, center);
+    gap: 5px;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+}
+.headlines-services::before {
+    content: url(imagees/plant.svg);
+    display: block;
+}
+.headlines-solution {
+    font-weight: 800;
+    font-size: 58px;
+    text-transform: capitalize;
+    line-height: 79px;
+}
+.headlines-solution span {
+    color: $main-color-green2;
+}
+.p-content {
+    color: $color-content-grey;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+}
+.preview-buttons {
+    @include flexCenter(normal, center);
+    gap: 30px;
+    margin-top: 30px;
+}
+.btn-how-it-works {
+    font-weight: 600;
+    font-size: 18px;
+    color: $color-content-grey;
+    @include flexCenter(center, center);
+    gap: 15px;
+    cursor: pointer;
+}
+.btn-how-it-works::after {
+    content: url(imagees/arrow_right_long.svg);
+    display: block;
+    width: 20px;
+}
+.statistics {
+    @include flexCenter(center, flex-end); 
+    gap: 10px;
+    margin: 36px 0 100px;
+    flex-wrap: wrap;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: #212529;
+
+}
+.statis-child {
+    @include flexCenter(center, center); 
+    gap: 10px;
+}
+.statis-value {
+    @include flexCenter(center, center); 
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(72.71deg, #00730C -83.5%, #F9F9F9 93.84%);
+    border-radius: 35px;
+
+}
+.statis-name {
+    width: 89px;
+    height: 40px;
+}
+//Services
+.services {
+    font-family: 'Nunito', sans-serif;
+}
+.row-services {
+    @include flexCenter(center, center);
+    flex-direction: column;
+    gap: 50px;
+}
+.services-text {
+    width: 80%;
+    @include flexCenter(center, center);
+    flex-direction: column; 
+    gap: 30px;   
+}
+.services-head {
+    font-weight: 800;
+    font-size: 45px;    
+}
+.services-head span {
+    color: $main-color-green2;
+}
+.services-text p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    color: $color-content-grey;
+}
+.services-cards {
+    @include flexCenter(center, center);
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.serv-card {
+    @include flexCenter(start, center);
+    flex-direction: column;
+    background: url(imagees/serv_card_bg.svg) no-repeat center 10px / 176px;
+    width: 330px;
+    height: 366px;
+    box-shadow: 2px 11px 30px rgba(51, 51, 51, 0.08);
+    border-radius: 10px;
+    padding: 43px;
+    gap: 50px;
+    cursor: pointer;
+}
+.serv-card:hover, .serv-card:hover .serv-card-content p{
+    background-color: $main-color-green2;
+    color: white;    
+}
+.serv-card:hover .serv-card-img {
+    filter: brightness(0) invert(1);
+}
+.serv-card-img img {
+    width: 70px;  
+}
+.serv-card-content {
+    @include flexCenter(center, normal);
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+.serv-card-content h5 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32.74px
+}
+.serv-card-content p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: $color-content-grey;
+}
+@media (max-width: 1800px){
+    .statistics, .preview-buttons{
+        align-self: center;        
+    }
+}
+@media (max-width: 1200px) {
+    .background img {
+        display: block;
+    }
+    main{
+        gap: 50px;
+    }
+    .background {
+        position:static;
+        width: calc(100% + 30px);
+        background: none;
+        margin: 0 -15px;
+    }
+    .background-plant img {
+        width: 83px;
+    }
+    .row-preview {
+        flex-direction: column;
+    }
+    .preview-content {
+        width: 100%;
+        margin-top: 48px;
+        gap: 10px;
+    }
+    .headlines-services {
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .headlines-solution {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 38px;
+    }
+    .p-content {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .preview-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+        align-self: center;
+        flex-direction: column;
+    }
+    .preview-buttons [class*="btn"] {
+        width: 303px;
+    }
+    .statistics {
+        margin: 30px 0 35px;
+    }
+    .statis-child {
+        background: linear-gradient(180deg, #FFF8F1 0%, #CBE5CE 100%);
+        border-radius: 32px;
+        padding: 8px 10px;
+        
+    }
+    .statis-value {
+        background: none;
+        width: auto;
+        height: auto;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .statis-name{
+        width: auto;
+        height: auto;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 14px;
+    }
+    .row-services{
+        gap: 30px;
+    }
+    .services-head {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 38.19px;
+    }
+    .services-text{
+        gap: 15px;
+    }
+    .services-text p{
+        font-size: 14px;
+        line-height: 22px;
+
+    }
+    .services-cards {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+    }    
+    .serv-card {
+        flex-direction: row;
+        width: auto;
+        height: auto;
+        background-position: left center;
+        background-size: 112px;
+        padding: 20px;
+    }
+    .serv-card-img img {
+        width: 50px;
+    }
+    .serv-card-content{
+       text-align: start;
+    }
+    .serv-card-content h5{
+        font-size: 16px;
+        line-height: 21.82px;
+    }
+    .serv-card-content p{
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+}
